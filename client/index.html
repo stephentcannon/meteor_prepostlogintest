@@ -1,0 +1,22 @@
+<head>
+  <title>prepostlogintest</title>
+</head>
+
+<body>
+	{{> main}}
+</body>
+
+<template name="main">
+	
+	<h1>preLogin postLogin hooks test</h1>
+	<p>Test application for the preLogin and postLogin Accounts package hooks.  {{loginButtons align="right"}}</p>
+	<ol>
+		<li>See server.js</li>
+		<li>Create account.</li>
+		<li>Restart server to set users.active=true</li>
+		<li>Login and out to see preLogin and postLogin fire in server.js</li>
+		<li>Logout and change Meteor.users.update({}, {$set:{active: false}}, {multi: true}); in server.js and save for restart.</li>
+		<li>Try logging back in to watch server side preLogin prevent login because account is not active. Better than deleting users.</li>
+	</ol>
+	
+</template>
